@@ -10,7 +10,7 @@ module.exports = function(grunt) {
     meta: {
       basePath: '',
       srcPath: 'style',
-      distPath: 'dist'
+      destPath: 'dest'
     },
 
     banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
@@ -23,13 +23,13 @@ module.exports = function(grunt) {
         // 待拼接的文件
         src: '<%= meta.srcPath %>/**/*.js',
         // 生成的文件位置
-        dest: '<%= meta.distPath %>/js/<%= pkg.name %>.js'
+        dest: '<%= meta.destPath %>/js/<%= pkg.name %>.js'
       },
       css: {
         // 待拼接的文件
         src: '<%= meta.srcPath %>/**/*.css',
         // 生成的文件位置
-        dest: '<%= meta.distPath %>/css/<%= pkg.name %>.css'
+        dest: '<%= meta.destPath %>/css/<%= pkg.name %>.css'
       }
 
     },
@@ -80,14 +80,14 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/js/<%= pkg.name %>.min.js': ['<%= concat.js.dest %>']
+          'dest/js/<%= pkg.name %>.min.js': ['<%= concat.js.dest %>']
         }
       }
     },
     cssmin: {
       css: {
-        src:'dist/css/<%= pkg.name %>.css',
-        dest:'dist/css/<%= pkg.name %>.min.css'
+        src:'dest/css/<%= pkg.name %>.css',
+        dest:'dest/css/<%= pkg.name %>.min.css'
       }
     }
   });
