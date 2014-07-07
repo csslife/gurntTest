@@ -1,0 +1,21 @@
+/*
+ * User: l8823520x
+ * Date: 7/7/14
+ * Time: 11:43 AM
+*/
+
+.model-sya {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px;
+    background: #f5f5f5;
+}
+.model-sya .title-sya {
+    background: #5890AD;
+    color: #000;
+    height: 25px;
+    font: 500 14px/25px'microsoft yahei';
+}
+.model-sya .content-sya {
+    padding: 10px;
+}
